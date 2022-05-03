@@ -17,7 +17,7 @@ Os requisitos do exercício são:
   * Iniciar o ssh-agent em background -> `eval "$(ssh-agent -s)"`
   * Adicionar chave privada no ssh-agent -> `ssh-add ~/.ssh/id_rsa`
   * Exibir a chave para copiar -> `cat ~/.ssh/id_rsa.pub`
-  * Os passos para colar a chave no (GitHub pode ser encontrado aqui.)[https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account]
+  * Os passos para colar a chave no _(GitHub pode ser encontrado aqui.)[https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account]_
 
 4. Criando um repositório no GitHub de exercícios da Trybe:
   * Crie um arquivo de texto `trybe-skills.txt` com o conteúdo: `O que vou aprender na Trybe: - Unix  - Bash  - Git`.
@@ -31,4 +31,4 @@ Os requisitos do exercício são:
   * Verifique se tudo está certo com sua URL remota utilizando o comando git remote -v. Seu terminal deve conter algo similar a isso: `origin git@github.com:john-snow/know-nothing.git (fetch)` e `origin git@github.com:john-snow/know-nothing.git (push)`. Em que `john-snow` corresponde ao seu username e `know-nothing` ao nome que você deu ao seu repositório.
   * Então envie as alterações para o repositório através de `git push origin master`.
 
-5. (Habilitando a autenticação de dois fatores no GitHub)[https://docs.github.com/pt/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication]
+5. _(Habilitando a autenticação de dois fatores no GitHub)[https://docs.github.com/pt/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication]_
