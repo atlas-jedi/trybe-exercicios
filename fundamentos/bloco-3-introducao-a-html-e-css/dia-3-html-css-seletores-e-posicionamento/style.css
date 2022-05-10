@@ -1,15 +1,28 @@
-h1, p {
-    text-align: center;
+div:hover{
+    border: 5px solid green;
 }
-
-li, ol {
-    list-style: none;
+.primary{
+    background-color: aquamarine;
+    color: red;
 }
-
-ol:hover{
-    background-color: blue;
-}
-
-li:active{
+.secondary{
+    background-color: brown;
     font-family: monospace;
+    font-size: 20px;
+}
+.complementary {
+    background-color: coral;
+    height: 100px;
+}
+
+.dark {
+    background-color: darkblue;
+}
+
+.light {
+    background-color: lightcyan;
+}
+
+.primary, .complementary, .light{
+    font-style: italic;
 }
