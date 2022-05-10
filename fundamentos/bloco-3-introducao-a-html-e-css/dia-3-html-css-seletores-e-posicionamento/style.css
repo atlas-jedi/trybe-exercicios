@@ -1,28 +1,42 @@
-div:hover{
-    border: 5px solid green;
-}
-.primary{
-    background-color: aquamarine;
-    color: red;
-}
-.secondary{
-    background-color: brown;
-    font-family: monospace;
+li {
     font-size: 20px;
 }
-.complementary {
-    background-color: coral;
-    height: 100px;
+li em{
+    font-weight: 800;
 }
-
-.dark {
-    background-color: darkblue;
+ol li {
+    background-color: yellow;
+    text-transform: uppercase;
 }
-
-.light {
-    background-color: lightcyan;
+ol li.par{
+    color: green;
+    text-transform: none;
 }
-
-.primary, .complementary, .light{
-    font-style: italic;
+h1, h2, h3 {
+    color: red;
+}
+h1 em, h2 em, h3 em {
+    font-size: 40px;
+    border: 1px solid black;
+}
+.font_blue{
+    color: blue;
+}
+.bg_pink{
+    background-color: pink;
+}
+ul.allies_list li:hover{
+    font-weight: 800;
+}
+ul.allies_list .font_orange a:hover{
+    color: orange;
+}
+ul.allies_list .font_green a:hover{
+    color: green;
+}
+ul.allies_list .font_black a:hover{
+    color: black;
+}
+ul.allies_list .font_yellow a:hover{
+    color: yellow;
 }
