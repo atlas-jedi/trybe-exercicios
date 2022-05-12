@@ -1,0 +1,42 @@
+li {
+    font-size: 20px;
+}
+li em{
+    font-weight: 800;
+}
+ol li {
+    background-color: yellow;
+    text-transform: uppercase;
+}
+ol li.par{
+    color: green;
+    text-transform: none;
+}
+h1, h2, h3 {
+    color: red;
+}
+h1 em, h2 em, h3 em {
+    font-size: 40px;
+    border: 1px solid black;
+}
+.font_blue{
+    color: blue;
+}
+.bg_pink{
+    background-color: pink;
+}
+ul.allies_list li:hover{
+    font-weight: 800;
+}
+ul.allies_list .font_orange a:hover{
+    color: orange;
+}
+ul.allies_list .font_green a:hover{
+    color: green;
+}
+ul.allies_list .font_black a:hover{
+    color: black;
+}
+ul.allies_list .font_yellow a:hover{
+    color: yellow;
+}
