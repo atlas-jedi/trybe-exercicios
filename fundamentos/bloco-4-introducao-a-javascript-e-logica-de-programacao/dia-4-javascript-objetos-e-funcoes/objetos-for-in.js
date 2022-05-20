@@ -11,3 +11,8 @@ console.log(`Bem-Vinda, ${info.personagem}`);
 
 // Exercício 2
 console.log(info);
+
+// Exercício 3
+for (propriedade in info) {
+  console.log(propriedade);
+}
