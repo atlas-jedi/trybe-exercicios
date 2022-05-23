@@ -46,11 +46,3 @@ ${info.nota} e ${info2.nota}
 ${infos.recorrente()}
 `);
 
-// Exercício 6
-
-
-// Exercício 7
-
-
-// Exercício 8
-
