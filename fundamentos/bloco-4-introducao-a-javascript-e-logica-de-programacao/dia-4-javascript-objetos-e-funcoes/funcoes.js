@@ -12,6 +12,16 @@ function verificaPalindrome(word) {
 }
 
 // Exercício 2
+function indiceMaiorValor(array) {
+  let maiorValor = array[0];
+  array.forEach(element => {
+    if (element > maiorValor) {
+      maiorValor = element;
+    }
+  });
+  return array.indexOf(maiorValor);
+}
+
 // Exercício 3
 // Exercício 4
 // Exercício 5
