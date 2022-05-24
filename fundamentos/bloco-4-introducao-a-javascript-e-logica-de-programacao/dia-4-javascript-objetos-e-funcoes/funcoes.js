@@ -70,3 +70,10 @@ function somatario(number) {
 }
 
 // Exercício 7
+function verificaFimPalavra(word, ending) {
+  let endingWord = word.slice(-ending.length);
+  if (endingWord === ending) {
+    return true;
+  }
+  return false;
+}
