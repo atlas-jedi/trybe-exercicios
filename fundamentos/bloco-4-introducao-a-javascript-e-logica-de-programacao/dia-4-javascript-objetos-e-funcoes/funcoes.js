@@ -34,6 +34,16 @@ function indiceMenorValor(array) {
 }
 
 // Exercício 4
+function maiorPalavra(array) {
+  let maiorPalavra = array[0];
+  array.forEach(element => {
+    if (element.length > maiorPalavra.length) {
+      maiorPalavra = element;
+    }
+  });
+  return maiorPalavra;
+}
+
 // Exercício 5
 // Exercício 6
 // Exercício 7
