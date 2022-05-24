@@ -23,6 +23,16 @@ function indiceMaiorValor(array) {
 }
 
 // Exercício 3
+function indiceMenorValor(array) {
+  let menorValor = array[0];
+  array.forEach(element => {
+    if (element < menorValor) {
+      menorValor = element;
+    }
+  });
+  return array.indexOf(menorValor);
+}
+
 // Exercício 4
 // Exercício 5
 // Exercício 6
