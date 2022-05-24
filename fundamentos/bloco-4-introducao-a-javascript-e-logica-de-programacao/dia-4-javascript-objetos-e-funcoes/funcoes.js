@@ -59,4 +59,14 @@ function repeatNumber(array) {
 }
 
 // Exercício 6
+function somatario(number) {
+  let soma = 0;
+  if (number > 0) {
+    for (let i = 1; i <= number; i += 1) {
+      soma += i;
+    }
+  }
+  return soma;
+}
+
 // Exercício 7
