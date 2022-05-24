@@ -45,5 +45,18 @@ function maiorPalavra(array) {
 }
 
 // Exercício 5
+function repeatNumber(array) {
+  let contadorRepeatNumber = 0;
+  let lastNumber = array[0];
+  for (let i = 0; i < array.length; i += 1) {
+    for (let j = i + 1; j < array.length; j += 1) {
+      if (array[j] === array[i]) {
+        contadorRepeatNumber += 1;
+      }
+    }
+  }
+  return contadorRepeatNumber;
+}
+
 // Exercício 6
 // Exercício 7
