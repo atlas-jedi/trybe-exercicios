@@ -67,6 +67,7 @@
     }
     // Tarefa 1 - Adicionando Body
     const h1 = createElement('h1', 'body');
+    h1.setAttribute('class', 'title');
     h1.innerText = 'Exercício 5.2 - Javascript DOM';
 
     // Tarefa 2 - Adicionando Main
@@ -74,20 +75,20 @@
     main.setAttribute('class', 'main-content');
 
     // Tarefa 3 - Adicionando Section
-    let section = createElement('section', 'main');
-    section.setAttribute('class', 'center-content');
+    const centerContent = createElement('section', 'main');
+    centerContent.setAttribute('class', 'center-content');
 
     // Tarefa 4 - Adicionando Parágrafo
     const p1 = createElement('p', '.center-content');
     p1.innerText = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
 
     // Tarefa 5 - Adicionando Section .left-content
-    section = createElement('section', 'main');
-    section.setAttribute('class', 'left-content');
+    const leftContent = createElement('section', 'main');
+    leftContent.setAttribute('class', 'left-content');
 
     // Tarefa 6 - Adicionando Section .right-content
-    section = createElement('section', 'main');
-    section.setAttribute('class', 'right-content');
+    const rightContent = createElement('section', 'main');
+    rightContent.setAttribute('class', 'right-content');
 
     // Tarefa 7 - Adicionando IMG
     const img = createElement('img', '.left-content');
@@ -104,7 +105,23 @@
 
     // Tarefa 9 - Adicionando 3 h3 filhas de main
     for (let i = 0; i < 3; i++){
-      const h3 = createElement('h3', 'main')
+      const h3 = createElement('h3', 'main');
+      h3.setAttribute('class', 'description');
+    }
+
+    // Edição 3 - Remover section .left-content
+    main.removeChild(leftContent);
+
+    // Edição 4 - Centralizando section .right-content
+    rightContent.style.marginRight = 'auto';
+
+    // Edição 5 - Trocando cor de fundo do elemento pai da section center-content;
+    centerContent.parentElement.style.backgroundColor = 'green'
+
+    // Edição 6 - Removendo os dois últimos itens da lista
+    let lista = document.querySelectorAll('li');
+    for (let i = lista.length - 1; i > lista.length - 3; i--){
+      ul.removeChild(lista[i]);
     }
   </script>
 </body>
