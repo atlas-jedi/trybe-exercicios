@@ -93,6 +93,14 @@
     const img = createElement('img', '.left-content');
     img.setAttribute('src', 'https://picsum.photos/200');
     img.setAttribute('class', 'small-image');
+
+    // Tarefa 8 - Adicionando uma lista não ordenada
+    const ul = createElement('ul', '.right-content');
+    const numbers = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+    numbers.forEach((element) => {
+      let li = createElement('li', 'ul');
+      li.innerText = element;
+    });
   </script>
 </body>
 
