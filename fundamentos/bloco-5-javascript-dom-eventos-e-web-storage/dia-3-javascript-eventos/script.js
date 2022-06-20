@@ -67,3 +67,5 @@ btn_holiday.addEventListener('click', () => {
   }
 })
 
+// Exercício 4 - Btn friday
+const btn_friday = createBtn('Sexta-feira', 'btn-friday');
