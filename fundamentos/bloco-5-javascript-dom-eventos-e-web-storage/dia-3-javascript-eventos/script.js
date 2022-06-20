@@ -6,12 +6,18 @@ function createDaysOfTheWeek() {
     const days = weekDays[index];
     const dayListItem = document.createElement('li');
     dayListItem.innerHTML = days;
-
     weekDaysList.appendChild(dayListItem);
   };
 };
 
 createDaysOfTheWeek();
+
+function clearDays() {
+  const days = document.querySelectorAll('.day');
+  days.forEach(element => {
+    element.remove();
+  });
+}
 
 // Exercício 1 - Dias do mês
 function createDaysOfTheMonth() {
@@ -69,3 +75,19 @@ btn_holiday.addEventListener('click', () => {
 
 // Exercício 4 - Btn friday
 const btn_friday = createBtn('Sexta-feira', 'btn-friday');
+
+// Exercício 5 - click btn friday
+let bool_friday = true;
+btn_friday.addEventListener('click', () => {
+  const friday_days = document.querySelectorAll('.friday');
+  if (bool_friday){
+    friday_days.forEach((element) => {
+      element.innerText = 'SEXTOU! /o/';
+    });
+    bool_friday = false;
+  } else {
+    clearDays();
+    createDaysOfTheMonth();
+    bool_friday = true;
+  }
+})
