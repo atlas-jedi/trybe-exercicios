@@ -38,3 +38,32 @@ function createDaysOfTheMonth() {
 }
 
 createDaysOfTheMonth();
+
+// Exercício 2 - Função Feriados
+function createBtn(name, id) {
+  const btn_container = document.querySelector('.buttons-container');
+  const btn = document.createElement('button');
+  btn.innerText = name;
+  btn.setAttribute('id', id);
+  btn_container.appendChild(btn);
+  return btn;
+}
+
+// Exercício 3 - Click btn
+const btn_holiday = createBtn('Feriados', 'btn-holiday');
+let bool_holiday = true;
+btn_holiday.addEventListener('click', () => {
+  const holiday_days = document.querySelectorAll('.holiday');
+  if (bool_holiday){
+    holiday_days.forEach((element) => {
+      element.style.backgroundColor = 'rgb(196, 196, 196)';
+    });
+    bool_holiday = false;
+  } else {
+    holiday_days.forEach((element) => {
+      element.style.backgroundColor = 'rgb(238,238,238)';
+    });
+    bool_holiday = true;
+  }
+})
+
