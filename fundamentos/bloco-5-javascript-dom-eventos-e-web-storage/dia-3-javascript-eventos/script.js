@@ -111,12 +111,28 @@ function zoomDayNormal(event) {
   day.style.color = '#888';
 }
 
+function randomRGB() {
+  const randomHexValue = () => Math.trunc(Math.random() * 255);
+  return `${randomHexValue()}, ${randomHexValue()}, ${randomHexValue()}`;
+}
+
 // Exercício 7 - ToDo List
 const btn_add = document.querySelector('#btn-add');
+const taskContainer = document.querySelector('.my-tasks');
 btn_add.addEventListener('click', () => {
   const textToDo = document.getElementById('task-input').value;
-  const taskContainer = document.querySelector('.my-tasks');
   const spanToDo = document.createElement('span');
-  spanToDo.innerText = textToDo;
+  spanToDo.innerText = `${textToDo}:`;
   taskContainer.appendChild(spanToDo);
+  createLegenda(`rgb(${randomRGB()})`);
 });
+
+// Exercício 8 - 
+function createLegenda(cor) {
+  const divLegenda = document.createElement('div');
+  const hr = document.createElement('br');
+  divLegenda.className = 'task';
+  divLegenda.style.backgroundColor = cor;
+  taskContainer.appendChild(divLegenda);
+  taskContainer.appendChild(hr);
+}
