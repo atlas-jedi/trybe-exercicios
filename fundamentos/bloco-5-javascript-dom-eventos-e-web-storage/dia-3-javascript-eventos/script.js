@@ -117,14 +117,21 @@ function randomRGB() {
 }
 
 // Exercício 7 - ToDo List
-const btn_add = document.querySelector('#btn-add');
-const taskContainer = document.querySelector('.my-tasks');
-btn_add.addEventListener('click', () => {
-  const textToDo = document.getElementById('task-input').value;
+const taskInput = document.getElementById('task-input');
+function addTask() {
+  const textToDo = taskInput.value;
   const spanToDo = document.createElement('span');
   spanToDo.innerText = `${textToDo}:`;
   taskContainer.appendChild(spanToDo);
   createLegenda(`rgb(${randomRGB()})`);
+}
+const btn_add = document.querySelector('#btn-add');
+const taskContainer = document.querySelector('.my-tasks');
+btn_add.addEventListener('click', addTask);
+taskInput.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter'){
+    addTask();
+  }
 });
 
 // Exercício 8 - 
