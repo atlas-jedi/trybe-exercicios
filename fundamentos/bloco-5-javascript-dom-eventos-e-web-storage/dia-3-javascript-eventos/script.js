@@ -91,3 +91,22 @@ btn_friday.addEventListener('click', () => {
     bool_friday = true;
   }
 })
+
+// Exercício 6 - Zoom
+const days = document.querySelectorAll('.day');
+days.forEach(element => {
+  element.addEventListener('mouseover', zoomDayHigh);
+  element.addEventListener('mouseout', zoomDayNormal);
+});
+
+function zoomDayHigh(event) {
+  const day = event.target;
+  day.style.fontSize = '25px';
+  day.style.color = '#666';
+}
+
+function zoomDayNormal(event) {
+  const day = event.target;
+  day.style.fontSize = '20px';
+  day.style.color = '#888';
+}

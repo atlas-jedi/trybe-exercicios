@@ -25,6 +25,7 @@ button {
 
 #days {
   margin: 0;
+  cursor:pointer;
 }
 
 #days li {
