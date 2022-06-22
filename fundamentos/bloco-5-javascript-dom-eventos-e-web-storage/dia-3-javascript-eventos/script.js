@@ -110,3 +110,13 @@ function zoomDayNormal(event) {
   day.style.fontSize = '20px';
   day.style.color = '#888';
 }
+
+// Exercício 7 - ToDo List
+const btn_add = document.querySelector('#btn-add');
+btn_add.addEventListener('click', () => {
+  const textToDo = document.getElementById('task-input').value;
+  const taskContainer = document.querySelector('.my-tasks');
+  const spanToDo = document.createElement('span');
+  spanToDo.innerText = textToDo;
+  taskContainer.appendChild(spanToDo);
+});
