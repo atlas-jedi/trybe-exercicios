@@ -134,12 +134,24 @@ taskInput.addEventListener('keydown', (event) => {
   }
 });
 
-// Exercício 8 - 
+// Exercício 8 e 9 - Criar elemento de cor e evento de Selecionar Cor
+function selectColor(event) {
+  const colorSelected = event.target;
+  const oldColorSelected = document.querySelectorAll('.selected');
+  if (colorSelected.className === 'task') {
+    colorSelected.className = 'task selected';
+  } else {
+    colorSelected.className = 'task';
+  }
+  oldColorSelected.forEach((element) => element.className = 'task');
+}
+
 function createLegenda(cor) {
   const divLegenda = document.createElement('div');
   const hr = document.createElement('br');
   divLegenda.className = 'task';
   divLegenda.style.backgroundColor = cor;
+  divLegenda.addEventListener('click', selectColor);
   taskContainer.appendChild(divLegenda);
   taskContainer.appendChild(hr);
 }
