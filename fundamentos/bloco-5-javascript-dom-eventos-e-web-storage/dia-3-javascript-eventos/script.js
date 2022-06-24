@@ -39,6 +39,9 @@ function createDaysOfTheMonth() {
     if (days == 24 || days == 25 || days == 31) {
       dayListItem.setAttribute('class', `${dayListItem.getAttribute('class')} holiday`);
     }
+    dayListItem.addEventListener('mouseover', zoomDayHigh);
+    dayListItem.addEventListener('mouseout', zoomDayNormal);
+    dayListItem.addEventListener('click', paintDay);
     daysList.appendChild(dayListItem);
   }
 }
@@ -92,15 +95,9 @@ btn_friday.addEventListener('click', () => {
   }
 })
 
-// Exercício 6 - Zoom
-const days = document.querySelectorAll('.day');
-days.forEach(element => {
-  element.addEventListener('mouseover', zoomDayHigh);
-  element.addEventListener('mouseout', zoomDayNormal);
-});
-
 function zoomDayHigh(event) {
   const day = event.target;
+  day.style.transition = '0.2s';
   day.style.fontSize = '25px';
   day.style.color = '#666';
 }
@@ -140,10 +137,14 @@ function selectColor(event) {
   const oldColorSelected = document.querySelectorAll('.selected');
   if (colorSelected.className === 'task') {
     colorSelected.className = 'task selected';
+    colorSelected.style.border = '3px solid white';
   } else {
     colorSelected.className = 'task';
   }
-  oldColorSelected.forEach((element) => element.className = 'task');
+  oldColorSelected.forEach((element) => {
+    element.className = 'task';
+    element.style.border = '1px solid black';
+  });
 }
 
 function createLegenda(cor) {
@@ -154,4 +155,10 @@ function createLegenda(cor) {
   divLegenda.addEventListener('click', selectColor);
   taskContainer.appendChild(divLegenda);
   taskContainer.appendChild(hr);
+}
+
+// Exercício 10 - Pintar dia referente a tarefa
+function paintDay(event) {
+  const colorSelected = document.querySelector('.selected').style.backgroundColor;
+  event.target.style.backgroundColor = colorSelected;
 }
