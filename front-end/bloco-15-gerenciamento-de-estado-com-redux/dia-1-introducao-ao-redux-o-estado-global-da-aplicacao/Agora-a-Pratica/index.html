@@ -59,7 +59,21 @@
 
       const store = Redux.createStore(reducer);
 
-      
+      const btnPrev = document.querySelector('#previous');
+      const btnNext = document.querySelector('#next');
+      const value = document.querySelector('#value');
+
+      btnPrev.addEventListener('click', () => {
+        store.dispatch({type: 'PREVIOUS_COLOR'});
+      });
+      btnNext.addEventListener('click', () => {
+        store.dispatch({type: 'NEXT_COLOR'});
+      });
+
+      store.subscribe(() => {
+        const { colors, index } = store.getState();
+        value.innerText = colors[index];
+      });
 
     </script>
   </body>
