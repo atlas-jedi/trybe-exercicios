@@ -54,22 +54,44 @@
         }
       };
 
-      const rootReducer = combineReducers(
-        ( themeReducer, statusReducer )
+      const rootReducer = Redux.combineReducers (
+        { themeReducer, statusReducer }
       );
 
-      const store = createStore(rootReducer);
+      const store = Redux.createStore(rootReducer);
 
       const themeButton = document.getElementById('toggle-theme');
       const statusButton = document.getElementById('toggle-status');
+      const statusElement = document.getElementById('status');
 
       themeButton.addEventListener('click', () => {
-        // coloque o código aqui.
+        store.dispatch({type: 'THEME'});
       });
 
       statusButton.addEventListener('click', () => {
-        // coloque o código aqui.
+        store.dispatch({type: 'STATUS'});
       });
+
+      store.subscribe(() => {
+        const { themeReducer: { theme }, statusReducer: { status } } = store.getState();
+        if (theme === 'light') {
+          document.body.style.backgroundColor = 'white';
+          document.body.style.color = '#333';
+          themeButton.innerText = 'Dark Mode';
+        } else {
+          document.body.style.backgroundColor = '#333';
+          document.body.style.color = 'white';
+          themeButton.innerText = 'Light Mode';
+        }
+        if (status === 'online') {
+          statusElement.innerText = 'Online';
+          statusButton.innerText = 'Ficar Offline';
+        } else {
+          statusElement.innerText = 'Offline';
+          statusButton.innerText = 'Ficar Online';
+        }
+      });
+
     </script>
   </body>
 </html>
