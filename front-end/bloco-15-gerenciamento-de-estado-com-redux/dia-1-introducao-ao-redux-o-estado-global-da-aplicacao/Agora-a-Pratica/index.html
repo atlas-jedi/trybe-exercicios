@@ -39,12 +39,27 @@
       };
       
       const reducer = (state = INITIAL_STATE, action) => {
+        let newIndex;
         switch (action.type) {
+          case 'NEXT_COLOR':
+            newIndex = state.index += 1;
+            return {
+              ...state,
+              index: state.index > 5 ? 0 : newIndex,
+            };
+          case 'PREVIOUS_COLOR':
+            newIndex = state.index -= 1;
+            return {
+              ...state,
+              index: state.index < 0 ? 5 : newIndex,
+            };
           default: return state;
         };
       };
 
       const store = Redux.createStore(reducer);
+
+      
 
     </script>
   </body>
