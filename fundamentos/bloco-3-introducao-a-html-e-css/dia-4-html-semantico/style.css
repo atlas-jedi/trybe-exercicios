@@ -1,0 +1,135 @@
+body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    background-image: url(1.png);
+    background-size: 45px;
+    background-repeat: repeat;
+}
+
+header{
+    width: 100%;
+    padding-top: 21.44px;
+    background-color: rgb(236, 236, 236);
+    top: 0;
+    color: rgb(2, 7, 17);
+}
+
+header h1{
+    text-align: center;
+    margin-top: 0;
+    margin-left: 10px;
+}
+
+main {
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    width: 80%;
+    background-color: beige;
+}
+
+main h2{
+    text-align: center;
+    text-decoration: underline;
+}
+
+a{
+    text-decoration: none;
+}
+
+br{
+    margin-bottom: 20px;
+}
+
+nav{
+    width: 100%;
+    padding: 5px;
+    background-color: rgb(180, 180, 180);
+}
+
+nav ul{
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+nav li{
+    display: inline-block;
+    margin-left: 5px;
+    align-items: middle;
+}
+
+nav a{
+    color: black;
+    text-decoration: none;
+    padding: 2px;
+    border: 1px solid black;
+    height: 20px;
+}
+
+nav a:hover{
+    color: white;
+    background-color: black;
+}
+
+.stomatopoda-figure{
+    display: inline-block;
+    border: 1px solid black;
+    margin-left: 350px;
+    text-align: center;
+    align-items: center;
+    font-style: italic;
+}
+
+.stomatopoda-figure img{
+    width: 300px;
+}
+
+.infobox {
+    width: 300px;
+    position: relative;
+    margin-right: 20px;
+    margin-top: 15px;
+    float: right;
+}
+
+.infobox td{
+    border: 1px solid black;
+}
+
+.infobox th{
+    background-color: rgb(243, 228, 17);
+    padding: 10px;
+}
+
+#video-table th, #video-table a {
+    background-color: red;
+    color: white;
+}
+
+.reference {
+    font-family: sans-serif;
+}
+
+.reference h3{
+    border-bottom: 1px solid gray;
+}
+
+.ref_index {
+    font-size: 12px;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    padding: 10px;
+}
