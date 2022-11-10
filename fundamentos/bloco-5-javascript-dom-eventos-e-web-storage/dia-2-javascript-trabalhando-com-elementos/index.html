@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Exercício 5.2</title>
+  <style>
+    section {
+      border-color: black;
+      border-style: solid;
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    .main-content {
+      background-color: yellow;
+    }
+
+    .main-content .center-content {
+      background-color: red;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .main-content .center-content p {
+      font-style: italic;
+    }
+
+    .main-content .left-content {
+      background-color: green;
+      width: 60%;
+      margin-left: 0;
+      margin-right: auto;
+    }
+
+    .main-content .left-content .small-image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 100%;
+    }
+
+    .main-content .right-content {
+      background-color: blue;
+      width: 60%;
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    .main-content .description {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    function createElement(element, parent){
+      parent = document.querySelector(parent);
+      element = document.createElement(element);
+      parent.appendChild(element);
+      return element;
+    }
+    // Tarefa 1 - Adicionando Body
+    const h1 = createElement('h1', 'body');
+    h1.setAttribute('class', 'title');
+    h1.innerText = 'Exercício 5.2 - Javascript DOM';
+
+    // Tarefa 2 - Adicionando Main
+    const main = createElement('main', 'body');
+    main.setAttribute('class', 'main-content');
+
+    // Tarefa 3 - Adicionando Section
+    const centerContent = createElement('section', 'main');
+    centerContent.setAttribute('class', 'center-content');
+
+    // Tarefa 4 - Adicionando Parágrafo
+    const p1 = createElement('p', '.center-content');
+    p1.innerText = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+
+    // Tarefa 5 - Adicionando Section .left-content
+    const leftContent = createElement('section', 'main');
+    leftContent.setAttribute('class', 'left-content');
+
+    // Tarefa 6 - Adicionando Section .right-content
+    const rightContent = createElement('section', 'main');
+    rightContent.setAttribute('class', 'right-content');
+
+    // Tarefa 7 - Adicionando IMG
+    const img = createElement('img', '.left-content');
+    img.setAttribute('src', 'https://picsum.photos/200');
+    img.setAttribute('class', 'small-image');
+
+    // Tarefa 8 - Adicionando uma lista não ordenada
+    const ul = createElement('ul', '.right-content');
+    const numbers = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+    numbers.forEach((element) => {
+      let li = createElement('li', 'ul');
+      li.innerText = element;
+    });
+
+    // Tarefa 9 - Adicionando 3 h3 filhas de main
+    for (let i = 0; i < 3; i++){
+      const h3 = createElement('h3', 'main');
+      h3.setAttribute('class', 'description');
+    }
+
+    // Edição 3 - Remover section .left-content
+    main.removeChild(leftContent);
+
+    // Edição 4 - Centralizando section .right-content
+    rightContent.style.marginRight = 'auto';
+
+    // Edição 5 - Trocando cor de fundo do elemento pai da section center-content;
+    centerContent.parentElement.style.backgroundColor = 'green'
+
+    // Edição 6 - Removendo os dois últimos itens da lista
+    let lista = document.querySelectorAll('li');
+    for (let i = lista.length - 1; i > lista.length - 3; i--){
+      ul.removeChild(lista[i]);
+    }
+  </script>
+</body>
+
+</html>
